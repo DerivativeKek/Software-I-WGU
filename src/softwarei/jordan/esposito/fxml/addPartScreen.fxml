@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="595.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="softwarei.jordan.esposito.controllers.AddPartScreenController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="103.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="55.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="inHouseButton" layoutX="194.0" layoutY="32.0" mnemonicParsing="false" onAction="#onInHouseClick" selected="true" text="In-House" />
+            <RadioButton fx:id="outsourceButton" layoutX="347.0" layoutY="32.0" mnemonicParsing="false" onAction="#onOutsourceClick" text="Outsourced" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="107.0" prefHeight="294.0" prefWidth="605.0">
+         <children>
+            <Text layoutX="382.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="79.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="76.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="76.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="74.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="74.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="changeText" layoutX="74.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="342.0" layoutY="268.0" mnemonicParsing="false" onAction="#savePart" text="Save" />
+            <Button fx:id="CancelButton" layoutX="398.0" layoutY="268.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+            <TextField fx:id="partsInvTextField" layoutX="190.0" layoutY="87.0" />
+            <TextField fx:id="partsPriceTextField" layoutX="190.0" layoutY="123.0" />
+            <TextField fx:id="partsIDTextField" editable="false" layoutX="190.0" layoutY="13.0" />
+            <TextField fx:id="partsNameTextField" layoutX="190.0" layoutY="49.0" />
+            <TextField fx:id="partsMaxTextField" layoutX="190.0" layoutY="161.0" />
+            <TextField fx:id="partsMachineIDTextField" layoutX="190.0" layoutY="198.0" />
+            <TextField fx:id="partsMinTextField" layoutX="426.0" layoutY="161.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

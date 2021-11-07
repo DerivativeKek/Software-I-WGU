@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="468.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="softwarei.jordan.esposito.controllers.modifyProductController">
+   <children>
+      <AnchorPane layoutX="482.0" prefHeight="45.0" prefWidth="359.0">
+         <children>
+            <TextField fx:id="searchField" layoutX="30.0" layoutY="10.0" prefHeight="25.0" prefWidth="165.0" promptText="Search by Part ID or Name" />
+            <Button fx:id="searchButton" layoutX="208.0" layoutY="10.0" mnemonicParsing="false" onAction="#searchButton" text="Search" />
+            <Button fx:id="clearButton" layoutX="269.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearSearch" text="Clear" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="414.0" layoutY="54.0" prefHeight="188.0" prefWidth="443.0">
+         <children>
+            <TableView fx:id="currentPartsTableView" prefHeight="138.0" prefWidth="443.0">
+               <columns>
+                  <TableColumn fx:id="partIdCol" prefWidth="75.0" text="Part ID" />
+                  <TableColumn fx:id="partNameCol" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="partInvCol" prefWidth="116.0" text="Inventory Level" />
+                  <TableColumn fx:id="partPriceCol" prefWidth="176.0" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+            <Button fx:id="addAssociatedPart" layoutX="319.0" layoutY="149.0" mnemonicParsing="false" onAction="#addPart" text="Add" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="414.0" layoutY="254.0" prefHeight="138.0" prefWidth="443.0">
+         <children>
+            <TableView fx:id="deletePartsTableView" prefHeight="138.0" prefWidth="443.0">
+              <columns>
+                <TableColumn fx:id="dpartIdCol" prefWidth="75.0" text="Part ID" />
+                <TableColumn fx:id="dpartNameCol" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="dpartInvCol" prefWidth="116.0" text="Inventory Level" />
+                  <TableColumn fx:id="dpartPriceCol" prefWidth="176.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="468.0" prefWidth="395.0">
+         <children>
+            <Text layoutX="23.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Product" wrappingWidth="111.55078125">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="60.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="productsIDField" editable="false" layoutX="119.0" layoutY="122.0" promptText="Auto Gen - Disabled" />
+            <TextField fx:id="productsNameField" layoutX="119.0" layoutY="160.0" />
+            <TextField fx:id="productsInvField" layoutX="119.0" layoutY="197.0" prefHeight="25.0" prefWidth="78.0" />
+            <Text layoutX="58.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="58.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="58.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="productsPriceField" layoutX="119.0" layoutY="232.0" prefHeight="25.0" prefWidth="78.0" />
+            <TextField fx:id="productsMaxField" layoutX="119.0" layoutY="276.0" prefHeight="25.0" prefWidth="78.0" />
+            <TextField fx:id="productsMinField" layoutX="256.0" layoutY="276.0" prefHeight="25.0" prefWidth="78.0" />
+            <Text layoutX="58.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="215.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="415.0" layoutY="393.0" prefHeight="90.0" prefWidth="443.0">
+         <children>
+            <Button fx:id="removeAssociatedPart" layoutX="230.0" layoutY="9.0" mnemonicParsing="false" onAction="#deletePart" text="Remove Associated Part" />
+            <Button fx:id="saveProduct" layoutX="230.0" layoutY="45.0" mnemonicParsing="false" onAction="#saveModifiedProduct" text="Save" />
+            <Button fx:id="prodCancel" layoutX="302.0" layoutY="45.0" mnemonicParsing="false" onAction="#onCancel" text="Cancel" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
