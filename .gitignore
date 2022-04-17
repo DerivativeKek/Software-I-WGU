@@ -1,2 +1,5 @@
 # Project exclude paths
 /out/
+/.idea/
+Software-I-WGU.iml
+.gitignore
