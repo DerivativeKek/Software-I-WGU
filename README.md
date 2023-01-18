@@ -1,4 +1,4 @@
-# Software-I-WGU
+# Inventory Management System
 
 Below is a program required for WGU's Software I class. See the below details for what was required.
 
